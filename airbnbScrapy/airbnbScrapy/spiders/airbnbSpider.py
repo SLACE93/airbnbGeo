@@ -4,7 +4,11 @@ from scrapy.loader import ItemLoader
 
 class AirbnbSpider(scrapy.Spider):
     name = 'AirbnbSP'
-    start_urls = ['https://www.airbnb.com/s/New-York--NY']
+    start_urls = ['https://www.airbnb.com/s/New-York--NY', 'https://www.airbnb.com/s/Paris--France', 'https://www.airbnb.com/s/Hawaii--United-States',
+                  'https://www.airbnb.com/s/Barcelona--Spain', 'https://www.airbnb.com/s/London--United-Kingdom', 'https://www.airbnb.com/s/San-Francisco--CA',
+                  'https://www.airbnb.com/s/Berlin--Germany', 'https://www.airbnb.com/s/Budapest--Hungary', 'https://www.airbnb.com/s/Rio-de-Janeiro',
+                  'https://www.airbnb.com/s/Austin', 'https://www.airbnb.com/s/Miami', 'https://www.airbnb.com/s/Rome',
+                  'https://www.airbnb.com/s/Venice', 'https://www.airbnb.com/s/Washington-DC', 'https://www.airbnb.com/s/Sydney']
 
     def parse(self, response):
         sel = scrapy.selector.Selector(response)
